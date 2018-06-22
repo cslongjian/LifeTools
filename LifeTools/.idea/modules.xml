@@ -4,6 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/LifeTools.iml" filepath="$PROJECT_DIR$/LifeTools.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/asynchttpclientnet/asynchttpclientnet.iml" filepath="$PROJECT_DIR$/asynchttpclientnet/asynchttpclientnet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/retrofitnet/retrofitnet.iml" filepath="$PROJECT_DIR$/retrofitnet/retrofitnet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/volleynet/volleynet.iml" filepath="$PROJECT_DIR$/volleynet/volleynet.iml" />
     </modules>
   </component>
 </project>
