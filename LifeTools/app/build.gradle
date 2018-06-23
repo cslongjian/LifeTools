@@ -1,20 +1,35 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "27.0.3"
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
     defaultConfig {
         applicationId "com.cslong.app.lifetools"
-        minSdkVersion 15
-        targetSdkVersion 25
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        buildConfigField "boolean", "LOG_DEBUG", "true"
+
     }
     buildTypes {
+        debug {
+            minifyEnabled false
+        }
+
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            // 混淆
+            minifyEnabled true
+            // Zipalign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources true
+            // Log
+            buildConfigField "boolean", "LOG_DEBUG", "false"
         }
     }
 }
@@ -24,9 +39,22 @@ dependencies {
     androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    implementation 'com.android.support:appcompat-v7:25.0.1'
-    testImplementation 'junit:junit:4.12'
-    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
-    implementation 'com.blankj:utilcode:1.17.0'
-    implementation 'com.android.support:design:25.0.1'
+
+    testImplementation rootProject.ext.deps.junit
+
+    // Support libraries
+    implementation rootProject.ext.deps.support.constraint
+    implementation rootProject.ext.deps.support.appcompat
+    implementation rootProject.ext.deps.support.v4
+    implementation rootProject.ext.deps.support.design
+
+
+    // module
+    implementation project(':asynchttpclientnet')
+    implementation project(':retrofitnet')
+    implementation project(':volleynet')
+
+
+//    thrid librarise
+    implementation rootProject.ext.deps.utilcode
 }
