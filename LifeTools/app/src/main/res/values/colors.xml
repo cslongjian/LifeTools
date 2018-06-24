@@ -1,6 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="color_transparent">#00000000</color>
+    <color name="color_white">#ffffff</color>
+    <color name="color_75_white">#C0FFFFFF</color>
+    <color name="color_50_white">#80FFFFFF</color>
+    <color name="color_25_white">#40FFFFFF</color>
+    <color name="color_15_white">#26FFFFFF</color>
+    <color name="color_10_white">#19FFFFFF</color>
+
+    <color name="color_black">#000000</color>
+    <color name="color_75_black">#C0000000</color>
+
+    <color name="defTextColor">@color/T1</color>
+    <color name="defTextColorHint">@color/T3</color>
+
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccent">@color/gold</color>
+    <color name="textColorPrimary">@color/T1</color>
+    <color name="colorWindowBackground">@color/bg</color>
+
+    <!--App 配置色    采用theme提供默认配置-->
+    <color name="T1">#2F3540</color>
+    <color name="T2">#727982</color>
+    <color name="T3">#B8BCC1</color>
+    <color name="gold">#D4A95B</color>
+    <color name="badge">#FF4445</color>
+    <color name="gold_2">#D69725</color>
+    <color name="gold_3">#FFEFD3</color>
+    <color name="orange">#FF7124</color>
+    <color name="line">#EFEFEF</color>
+    <color name="bg">#F6F6F6</color>
+
+
+    <!-- 4.5.0中共用的颜色值 -->
+    <color name="cm_50">#ff9000</color>
+    <color name="btnp_50">#ff6600</color>
+    <color name="cl_50">#f0ede2</color>
+    <!-- 分割线 -->
+    <color name="cbg_50">#f0ede2</color>
+    <!-- 全局背景色 -->
+    <color name="cg_50">#96bc6e</color>
+    <color name="cb_50">#65aae9</color>
+    <color name="cr_50">#f66f57</color>
+    <color name="t1_50">#494238</color>
+    <color name="t2_50">#8b7a69</color>
+    <color name="t3_50">#beb1a9</color>
+    <color name="loading_bg">#EFECE1</color>
+    <color name="clp_501">#f9f8f2</color>
+    <color name="cbg_img_50">#26FFFFFF</color>
+    <color name="cp">@color/btnp_50</color>
+    <color name="CCFFFFFF">#CCFFFFFF</color>
+    <color name="alpha_black">#66000000</color>
 </resources>
