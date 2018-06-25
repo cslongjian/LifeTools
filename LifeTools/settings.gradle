@@ -1,1 +1,1 @@
-include ':app', ':volleynet', ':retrofitnet', ':asynchttpclientnet'
+include ':app', ':volleynet', ':retrofitnet', ':asynchttpclientnet', ':designpattern', ':widget', ':utils'

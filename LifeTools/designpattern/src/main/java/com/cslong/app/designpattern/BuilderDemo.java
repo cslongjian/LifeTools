@@ -1,4 +1,4 @@
-package com.cslong.app.lifetools.designpattern;
+package com.cslong.app.designpattern;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -10,13 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 
-import com.cslong.app.lifetools.R;
-
 /**
- * Created by chenlongjian on 2018/6/24.
- *
- * 主要使用 builder 模式来构建dialog
- *
+ * Created by chenlongjian on 2018/6/25.
  */
 
 public class BuilderDemo extends android.support.v4.app.DialogFragment {

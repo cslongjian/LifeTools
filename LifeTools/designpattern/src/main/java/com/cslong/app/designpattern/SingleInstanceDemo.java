@@ -1,11 +1,10 @@
-package com.cslong.app.lifetools.designpattern;
+package com.cslong.app.designpattern;
 
 /**
- * Created by chenlongjian on 2018/6/24.
+ * Created by chenlongjian on 2018/6/25.
  */
 
 public class SingleInstanceDemo {
-
     private static SingleInstanceDemo instance;
 
     //私有构造方式。禁止外部调用

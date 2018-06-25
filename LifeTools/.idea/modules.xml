@@ -5,8 +5,11 @@
       <module fileurl="file://$PROJECT_DIR$/LifeTools.iml" filepath="$PROJECT_DIR$/LifeTools.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/asynchttpclientnet/asynchttpclientnet.iml" filepath="$PROJECT_DIR$/asynchttpclientnet/asynchttpclientnet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/designpattern/designpattern.iml" filepath="$PROJECT_DIR$/designpattern/designpattern.iml" />
       <module fileurl="file://$PROJECT_DIR$/retrofitnet/retrofitnet.iml" filepath="$PROJECT_DIR$/retrofitnet/retrofitnet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/utils/utils.iml" filepath="$PROJECT_DIR$/utils/utils.iml" />
       <module fileurl="file://$PROJECT_DIR$/volleynet/volleynet.iml" filepath="$PROJECT_DIR$/volleynet/volleynet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/widget/widget.iml" filepath="$PROJECT_DIR$/widget/widget.iml" />
     </modules>
   </component>
 </project>

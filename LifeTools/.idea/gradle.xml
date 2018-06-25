@@ -10,8 +10,11 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/asynchttpclientnet" />
+            <option value="$PROJECT_DIR$/designpattern" />
             <option value="$PROJECT_DIR$/retrofitnet" />
+            <option value="$PROJECT_DIR$/utils" />
             <option value="$PROJECT_DIR$/volleynet" />
+            <option value="$PROJECT_DIR$/widget" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
