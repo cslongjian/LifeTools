@@ -25,4 +25,10 @@
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/header_layout"
         app:menu="@menu/main"></android.support.design.widget.NavigationView>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
 </android.support.v4.widget.DrawerLayout>
