@@ -11,10 +11,10 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="主页面" />
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
     </LinearLayout>
 
     <android.support.design.widget.NavigationView
@@ -26,9 +26,5 @@
         app:headerLayout="@layout/header_layout"
         app:menu="@menu/main"></android.support.design.widget.NavigationView>
 
-    <ListView
-        android:id="@+id/list"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
 
 </android.support.v4.widget.DrawerLayout>

@@ -1,30 +1,31 @@
 package com.cslong.app.lifetools;
 
 import android.app.Activity;
-import android.app.LauncherActivity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.android.volley.toolbox.Volley;
+import com.cslong.app.lifetools.annotationDemo.AnnotationDemoActivity;
 import com.cslong.app.lifetools.datastructures_algorithms.simple_series.DataStructuresAndAlgorithmsActivity;
 import com.cslong.app.lifetools.lifetools_business.LifeToolsActivity;
-import com.cslong.app.lifetools.rooter.simple.impl.AppRooterSimple;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
 
     private ListItem[] mListItems = {
             new ListItem(DataStructuresAndAlgorithmsActivity.class, "数据结构与算法"),
             new ListItem(LifeToolsActivity.class, "lifetools"),
+            new ListItem(AnnotationDemoActivity.class, "注解样例"),
+
     };
 
 
@@ -41,6 +42,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+
         setContentView(R.layout.activity_main);
 
 
@@ -61,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
 
     private static class MAdapter extends BaseAdapter {
         private ListItem[] mListItems;

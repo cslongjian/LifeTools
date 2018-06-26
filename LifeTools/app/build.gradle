@@ -53,6 +53,9 @@ dependencies {
     implementation project(':asynchttpclientnet')
     implementation project(':retrofitnet')
     implementation project(':volleynet')
+    implementation project(':utils')
+    implementation project(':widget')
+    implementation project(':designpattern')
 
 
 //    thrid librarise
