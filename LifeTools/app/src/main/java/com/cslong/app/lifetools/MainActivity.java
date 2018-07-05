@@ -3,7 +3,8 @@ package com.cslong.app.lifetools;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.ActionBar;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +17,7 @@ import android.widget.TextView;
 
 import com.cslong.app.lifetools.annotationDemo.AnnotationDemoActivity;
 import com.cslong.app.lifetools.datastructures_algorithms.simple_series.DataStructuresAndAlgorithmsActivity;
+import com.cslong.app.lifetools.designpatterndemo.SingleInstanceActivity;
 import com.cslong.app.lifetools.lifetools_business.LifeToolsActivity;
 
 public class MainActivity extends BaseActivity {
@@ -25,6 +27,7 @@ public class MainActivity extends BaseActivity {
             new ListItem(DataStructuresAndAlgorithmsActivity.class, "数据结构与算法"),
             new ListItem(LifeToolsActivity.class, "lifetools"),
             new ListItem(AnnotationDemoActivity.class, "注解样例"),
+            new ListItem(SingleInstanceActivity.class, "单例"),
 
     };
 
@@ -46,6 +49,14 @@ public class MainActivity extends BaseActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
 
         setContentView(R.layout.activity_main);
+
+
+        // Set up the toolbar.
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        ActionBar ab = getSupportActionBar();
+        ab.setDisplayHomeAsUpEnabled(false);
+        ab.setDisplayShowHomeEnabled(false);
 
 
         ListView listView = (ListView) findViewById(R.id.list);

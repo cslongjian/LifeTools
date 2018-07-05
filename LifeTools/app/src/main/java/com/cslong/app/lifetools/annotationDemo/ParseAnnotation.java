@@ -18,7 +18,7 @@ public class ParseAnnotation {
             System.out.println("循环");
             // 判断该字段是否存在CustomAnnotation注解
             if (field.isAnnotationPresent(TestAnnotation.class)) {
-                System.out.println("运行");
+                System.out.println("运行！！！！！");
                 // 得到该注解对象
                 TestAnnotation customAnnotation = field.getAnnotation(TestAnnotation.class);
                 // 得到注解的成员

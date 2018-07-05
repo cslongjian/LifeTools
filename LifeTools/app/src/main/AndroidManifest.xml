@@ -10,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,9 +24,22 @@
 
         </activity>
 
-        <activity android:name=".lifetools_business.LifeToolsActivity"></activity>
+        <activity
+            android:name=".lifetools_business.LifeToolsActivity"
+            android:label="业务入口"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"></activity>
 
-        <activity android:name=".annotationDemo.AnnotationDemoActivity"></activity>
+        <activity
+            android:name=".annotationDemo.AnnotationDemoActivity"
+            android:label="注解介绍"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"></activity>
+
+        <activity
+            android:name=".designpatterndemo.SingleInstanceActivity"
+            android:label="单例介绍"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"></activity>
+
+
     </application>
 
 </manifest>
