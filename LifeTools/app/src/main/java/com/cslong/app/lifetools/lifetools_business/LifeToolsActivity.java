@@ -1,6 +1,6 @@
 package com.cslong.app.lifetools.lifetools_business;
 
-import android.app.Activity;
+import android.app.LauncherActivity;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -14,8 +14,10 @@ import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.ListAdapter;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.cslong.app.lifetools.BaseActivity;
 import com.cslong.app.lifetools.R;
@@ -23,7 +25,6 @@ import com.cslong.app.lifetools.R;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.zip.Inflater;
 
 /**
  * Created by chenlongjian on 2018/6/25.
@@ -33,11 +34,23 @@ public class LifeToolsActivity extends BaseActivity {
 
     private GridView mLifeToolsGridView;
 
+    private Context mContext;
+
+    private ListItem[] mListItems = {
+            new ListItem("笑话"),
+            new ListItem("娱乐"),
+            new ListItem("预留位置"),
+            new ListItem("预留位置"),
+            new ListItem("预留位置"),
+    };
+
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_lifetools);
+        mContext = this;
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -45,31 +58,29 @@ public class LifeToolsActivity extends BaseActivity {
         ab.setDisplayHomeAsUpEnabled(true);
         ab.setDisplayShowHomeEnabled(true);
 
-
         mLifeToolsGridView = (GridView) findViewById(R.id.life_type);
+        ListAdapter gridAdapter = new LifetoolAdatper(null, this, mListItems);
+        mLifeToolsGridView.setAdapter(gridAdapter);
+        mLifeToolsGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                switch (position) {
+                    case 0:
+                        break;
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                    case 4:
+                        break;
+                }
+                Toast.makeText(mContext, position + "当前位置", Toast.LENGTH_SHORT).show();
+            }
 
-        //生成动态数组，并且转入数据
-        ArrayList<HashMap<String, Object>> lstImageItem = new ArrayList<HashMap<String, Object>>();
-        for (int i = 0; i < 10; i++) {
-            HashMap<String, Object> map = new HashMap<String, Object>();
-            map.put("ItemImage", R.drawable.default_network_error_icon);//添加图像资源的ID
-            map.put("ItemText", "NO." + String.valueOf(i));//按序号做ItemText
-            lstImageItem.add(map);
-        }
-        //生成适配器的ImageItem <====> 动态数组的元素，两者一一对应
-        SimpleAdapter saImageItems = new SimpleAdapter(this, //没什么解释
-                lstImageItem,//数据来源
-                R.layout.item_lifetools_type_grid,//night_item的XML实现
+        });
 
-                //动态数组与ImageItem对应的子项
-                new String[]{"ItemImage", "ItemText"},
-
-                //ImageItem的XML文件里面的一个ImageView,两个TextView ID
-                new int[]{R.id.ItemImage, R.id.ItemText});
-        //添加并且显示
-        mLifeToolsGridView.setAdapter(saImageItems);
-        //添加消息处理
-//        gridview.setOnItemClickListener(new ItemClickListener());
 
     }
 
@@ -80,12 +91,22 @@ public class LifeToolsActivity extends BaseActivity {
         return true;
     }
 
+    private static class ListItem {
+        String title;
+
+        public ListItem(String title) {
+            this.title = title;
+        }
+    }
+
+
     private class LifetoolAdatper extends BaseAdapter {
         private List<String> mList;//数据源
+        private ListItem[] mListItems;
         private LayoutInflater mInflater;//布局装载器对象
 
-        public LifetoolAdatper(List<String> data, Context context) {
-
+        public LifetoolAdatper(List<String> data, Context context, ListItem[] mListItems) {
+            this.mListItems = mListItems;
             this.mList = data;
             mInflater = LayoutInflater.from(context);
         }
@@ -93,7 +114,7 @@ public class LifeToolsActivity extends BaseActivity {
 
         @Override
         public int getCount() {
-            return mList.size();
+            return mListItems.length;
         }
 
 
@@ -105,33 +126,50 @@ public class LifeToolsActivity extends BaseActivity {
 
         @Override
         public Object getItem(int position) {
-            return mList.get(position);
+            return mListItems[position];
         }
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
-            //将布局文件转化为View对象
-            View view = mInflater.inflate(R.layout.item_lifetools_type_grid, null);
 
-//            这里有缓存操作。
+            ViewHolder viewHolder;
+            //如果view未被实例化过，缓存池中没有对应的缓存
+            if (convertView == null) {
+                viewHolder = new ViewHolder();
+                // 由于我们只需要将XML转化为View，并不涉及到具体的布局，所以第二个参数通常设置为null
+                convertView = mInflater.inflate(R.layout.item_lifetools_type_grid, null);
 
-            /**
-             * 找到item布局文件中对应的控件
-             */
-            ImageView imageView = (ImageView) view.findViewById(R.id.ItemImage);
-            TextView titleTextView = (TextView) view.findViewById(R.id.ItemText);
+                //对viewHolder的属性进行赋值
+                viewHolder.imageView = (ImageView) convertView.findViewById(R.id.ItemImage);
+                viewHolder.title = (TextView) convertView.findViewById(R.id.ItemText);
+
+                //通过setTag将convertView与viewHolder关联
+                convertView.setTag(viewHolder);
+            } else {//如果缓存池中有对应的view缓存，则直接通过getTag取出viewHolder
+                viewHolder = (ViewHolder) convertView.getTag();
+            }
+
 
             //获取相应索引的ItemBean对象
-            String bean = mList.get(position);
+            String bean = mListItems[position].title;
 
             /**
              * 设置控件的对应属性值
              */
-            imageView.setImageResource(R.drawable.default_network_error_icon);
-            titleTextView.setText(bean);
+            viewHolder.imageView.setImageResource(R.drawable.default_network_error_icon);
+            viewHolder.title.setText(bean);
 
-            return view;
+            return convertView;
         }
+
+
+        // ViewHolder用于缓存控件
+        class ViewHolder {
+            public ImageView imageView;
+            public TextView title;
+
+        }
+
     }
 
 
