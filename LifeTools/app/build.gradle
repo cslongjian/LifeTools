@@ -60,4 +60,10 @@ dependencies {
 
 //    thrid librarise
     implementation rootProject.ext.deps.utilcode
+
+
+    implementation rootProject.ext.deps.rxjava
+    implementation rootProject.ext.deps.rxandroid
+
+
 }
