@@ -5,6 +5,7 @@ import android.os.Bundle;
 import com.cslong.app.lifetools.BaseActivity;
 
 import rx.Observable;
+import rx.Subscriber;
 
 
 /**
@@ -21,6 +22,33 @@ public class CreateObservablesActivity extends BaseActivity {
 
 
     private Observable<Integer> createObserver() {
+
+        return  Observable.create(new Observable.OnSubscribe<Integer>() {
+            @Override
+            public void call(Subscriber<? super Integer> subscriber) {
+
+
+                subscriber.onNext(1);
+
+            }
+        });
+
+//        .subscribe(new Subscriber<Integer>() {
+//            @Override
+//            public void onCompleted() {
+//
+//            }
+//
+//            @Override
+//            public void onError(Throwable e) {
+//
+//            }
+//
+//            @Override
+//            public void onNext(Integer integer) {
+//
+//            }
+//        })
 
     }
 
