@@ -2,6 +2,7 @@ package com.cslong.app.lifetools.rxjavademo;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ViewAnimator;
 
 import com.cslong.app.lifetools.BaseActivity;
 
@@ -23,6 +24,8 @@ public class CreateObservablesActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
 
 
     }
