@@ -1,4 +1,4 @@
-package com.cslong.app.lifetools.datastructures_algorithms.leetcode.array;
+package com.cslong.app.lifetools.datastructures_algorithms.leetcode.primary.array;
 
 /**
  * 移动零

@@ -1,7 +1,5 @@
-package com.cslong.app.lifetools.datastructures_algorithms.leetcode.array;
+package com.cslong.app.lifetools.datastructures_algorithms.leetcode.primary.array;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
