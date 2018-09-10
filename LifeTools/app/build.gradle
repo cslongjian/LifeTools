@@ -35,20 +35,16 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-
     testImplementation rootProject.ext.deps.junit
-
     // Support libraries
     implementation rootProject.ext.deps.support.constraint
     implementation rootProject.ext.deps.support.appcompat
     implementation rootProject.ext.deps.support.v4
     implementation rootProject.ext.deps.support.design
-
-
     // module
     implementation project(':asynchttpclientnet')
     implementation project(':retrofitnet')
@@ -56,14 +52,9 @@ dependencies {
     implementation project(':utils')
     implementation project(':widget')
     implementation project(':designpattern')
-
-
-//    thrid librarise
+    //    thrid librarise
     implementation rootProject.ext.deps.utilcode
-
-
     implementation rootProject.ext.deps.rxjava
     implementation rootProject.ext.deps.rxandroid
-
-
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
 }
