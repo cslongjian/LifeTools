@@ -39,6 +39,11 @@
             android:label="单例介绍"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"></activity>
 
+        <!---->
+
+        <activity android:name="com.cslong.app.basic_exercises.component.fragment.FragmentPracticeActivity">
+
+        </activity>
 
     </application>
 

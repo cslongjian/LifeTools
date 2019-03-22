@@ -15,6 +15,7 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.cslong.app.basic_exercises.component.fragment.FragmentPracticeActivity;
 import com.cslong.app.lifetools.annotationDemo.AnnotationDemoActivity;
 import com.cslong.app.lifetools.datastructures_algorithms.simple_series.DataStructuresAndAlgorithmsActivity;
 import com.cslong.app.lifetools.designpatterndemo.SingleInstanceActivity;
@@ -23,11 +24,7 @@ import com.cslong.app.lifetools.lifetools_business.LifeToolsActivity;
 public class MainActivity extends BaseActivity {
 
 
-    private ListItem[] mListItems = {
-            new ListItem(DataStructuresAndAlgorithmsActivity.class, "数据结构与算法"),
-            new ListItem(LifeToolsActivity.class, "lifetools"),
-            new ListItem(AnnotationDemoActivity.class, "注解样例"),
-            new ListItem(SingleInstanceActivity.class, "单例"),
+    private ListItem[] mListItems = {new ListItem(DataStructuresAndAlgorithmsActivity.class, "数据结构与算法"), new ListItem(LifeToolsActivity.class, "lifetools"), new ListItem(AnnotationDemoActivity.class, "注解样例"), new ListItem(SingleInstanceActivity.class, "单例"), new ListItem(FragmentPracticeActivity.class, "Fragment Demo"),
 
     };
 
@@ -103,8 +100,7 @@ public class MainActivity extends BaseActivity {
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
             if (convertView == null) {
-                convertView = LayoutInflater.from(parent.getContext())
-                        .inflate(android.R.layout.simple_list_item_1, parent, false);
+                convertView = LayoutInflater.from(parent.getContext()).inflate(android.R.layout.simple_list_item_1, parent, false);
             }
             TextView textView = (TextView) convertView.findViewById(android.R.id.text1);
             ListItem listItem = mListItems[position];

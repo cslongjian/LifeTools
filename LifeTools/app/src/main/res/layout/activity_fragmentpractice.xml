@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/fragment_title"
+        android:name="com.cslong.app.basic_exercises.component.fragment.TitleFragment"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+
+    <fragment
+        android:id="@+id/fragment_content"
+        android:name="com.cslong.app.basic_exercises.component.fragment.ContentFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</RelativeLayout>
