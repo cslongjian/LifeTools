@@ -11,6 +11,8 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
+//将字符串key-value 添加到json字符串数组中。。统计模块使用测试
+
 public class CharTest {
 
 
