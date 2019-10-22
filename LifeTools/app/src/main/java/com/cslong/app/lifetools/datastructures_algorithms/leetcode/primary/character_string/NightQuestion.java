@@ -43,7 +43,7 @@ public class NightQuestion {
             }
 
             for (int i = 0; i < strs[0].length(); i++) {
-                
+
             }
 
             char check = strs[0].charAt(headIndex);
