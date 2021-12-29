@@ -1,0 +1,58 @@
+ext {
+    // ****************host统一在末端加"/"*******************
+
+    // PHP 环境
+    def PHPServers = [
+            "dev"    : "\"http://api-dev.hzl.com/appapi/\"",
+            "test1"  : "\"http://api-test.hzl.com/appapi/\"",
+            "release": "\"https://api.hzl.com/appapi/\"",
+    ]
+
+    // PHP 环境
+    def PHPServers_V2 = [
+            "dev"    : "\"http://api-dev.hzl.com/apiv2/\"",
+            "test1"  : "\"http://api-test.hzl.com/apiv2/\"",
+            "release": "\"https://api.hzl.com/apiv2/\"",
+    ]
+
+    // PHP 环境
+    def PHPServers_PURE = [
+            "dev"    : "\"http://api-dev.hzl.com/\"",
+            "test1"  : "\"http://api-test.hzl.com/\"",
+            "release": "\"https://api.hzl.com/\"",
+    ]
+
+
+    // H5 环境
+    def h5Servers = [
+            "dev"    : "\"https://dvb-dev.hzl.com\"",
+            "test1"  : "\"https://www-test.hzl.com\"",
+            "release": "\"https://www.hzl.com\""
+    ]
+
+    //统计
+    def StatServers = [
+            "dev"    : "\"https://lac-dev.hzl.com/\"",
+            "test1"  : "\"http://192.168.9.83:8080/\"",
+            "release": "\"https://tjdata.hzl.com/\""
+    ]
+
+    // 1 正式环境
+    // 2 测试环境
+    // 3 开发环境
+    def envValues = [
+            "dev"    : 3,
+            "test1"  : 2,
+            "release": 1,
+    ]
+
+    // 切换环境 dev test1 test4 release
+    env = "test1"
+
+    envType = envValues[env]
+    phpEnv = PHPServers[env]
+    phpEnv_v2 = PHPServers_V2[env]
+    phpEnv_pure = PHPServers_PURE[env]
+    h5Env = h5Servers[env]
+    statEnv = StatServers[env]
+}
