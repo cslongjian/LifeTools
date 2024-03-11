@@ -2,14 +2,39 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/LifeTools.iml" filepath="$PROJECT_DIR$/LifeTools.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/asynchttpclientnet/asynchttpclientnet.iml" filepath="$PROJECT_DIR$/asynchttpclientnet/asynchttpclientnet.iml" />
-      <module fileurl="file://$PROJECT_DIR$/designpattern/designpattern.iml" filepath="$PROJECT_DIR$/designpattern/designpattern.iml" />
-      <module fileurl="file://$PROJECT_DIR$/retrofitnet/retrofitnet.iml" filepath="$PROJECT_DIR$/retrofitnet/retrofitnet.iml" />
-      <module fileurl="file://$PROJECT_DIR$/utils/utils.iml" filepath="$PROJECT_DIR$/utils/utils.iml" />
-      <module fileurl="file://$PROJECT_DIR$/volleynet/volleynet.iml" filepath="$PROJECT_DIR$/volleynet/volleynet.iml" />
-      <module fileurl="file://$PROJECT_DIR$/widget/widget.iml" filepath="$PROJECT_DIR$/widget/widget.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/LifeTools.iml" filepath="$PROJECT_DIR$/.idea/modules/LifeTools.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/LifeTools.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/LifeTools.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/LifeTools.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/LifeTools.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/LifeTools.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/LifeTools.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/LifeTools.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/LifeTools.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/asynchttpclientnet/LifeTools.asynchttpclientnet.iml" filepath="$PROJECT_DIR$/.idea/modules/asynchttpclientnet/LifeTools.asynchttpclientnet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/asynchttpclientnet/LifeTools.asynchttpclientnet.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/asynchttpclientnet/LifeTools.asynchttpclientnet.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/asynchttpclientnet/LifeTools.asynchttpclientnet.main.iml" filepath="$PROJECT_DIR$/.idea/modules/asynchttpclientnet/LifeTools.asynchttpclientnet.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/asynchttpclientnet/LifeTools.asynchttpclientnet.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/asynchttpclientnet/LifeTools.asynchttpclientnet.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/checktest/LifeTools.checktest.iml" filepath="$PROJECT_DIR$/.idea/modules/checktest/LifeTools.checktest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/checktest/LifeTools.checktest.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/checktest/LifeTools.checktest.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/checktest/LifeTools.checktest.main.iml" filepath="$PROJECT_DIR$/.idea/modules/checktest/LifeTools.checktest.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/checktest/LifeTools.checktest.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/checktest/LifeTools.checktest.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/designpattern/LifeTools.designpattern.iml" filepath="$PROJECT_DIR$/.idea/modules/designpattern/LifeTools.designpattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/designpattern/LifeTools.designpattern.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/designpattern/LifeTools.designpattern.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/designpattern/LifeTools.designpattern.main.iml" filepath="$PROJECT_DIR$/.idea/modules/designpattern/LifeTools.designpattern.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/designpattern/LifeTools.designpattern.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/designpattern/LifeTools.designpattern.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/retrofitnet/LifeTools.retrofitnet.iml" filepath="$PROJECT_DIR$/.idea/modules/retrofitnet/LifeTools.retrofitnet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/retrofitnet/LifeTools.retrofitnet.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/retrofitnet/LifeTools.retrofitnet.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/retrofitnet/LifeTools.retrofitnet.main.iml" filepath="$PROJECT_DIR$/.idea/modules/retrofitnet/LifeTools.retrofitnet.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/retrofitnet/LifeTools.retrofitnet.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/retrofitnet/LifeTools.retrofitnet.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/utils/LifeTools.utils.iml" filepath="$PROJECT_DIR$/.idea/modules/utils/LifeTools.utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/utils/LifeTools.utils.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/utils/LifeTools.utils.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/utils/LifeTools.utils.main.iml" filepath="$PROJECT_DIR$/.idea/modules/utils/LifeTools.utils.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/utils/LifeTools.utils.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/utils/LifeTools.utils.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/volleynet/LifeTools.volleynet.iml" filepath="$PROJECT_DIR$/.idea/modules/volleynet/LifeTools.volleynet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/volleynet/LifeTools.volleynet.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/volleynet/LifeTools.volleynet.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/volleynet/LifeTools.volleynet.main.iml" filepath="$PROJECT_DIR$/.idea/modules/volleynet/LifeTools.volleynet.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/volleynet/LifeTools.volleynet.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/volleynet/LifeTools.volleynet.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/widget/LifeTools.widget.iml" filepath="$PROJECT_DIR$/.idea/modules/widget/LifeTools.widget.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/widget/LifeTools.widget.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/widget/LifeTools.widget.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/widget/LifeTools.widget.main.iml" filepath="$PROJECT_DIR$/.idea/modules/widget/LifeTools.widget.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/widget/LifeTools.widget.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/widget/LifeTools.widget.unitTest.iml" />
     </modules>
   </component>
 </project>

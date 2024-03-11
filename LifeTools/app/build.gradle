@@ -2,7 +2,6 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
     defaultConfig {
         applicationId "com.cslong.app.lifetools"
         minSdkVersion rootProject.ext.minSdkVersion
@@ -14,9 +13,27 @@ android {
         buildConfigField "boolean", "LOG_DEBUG", "true"
 
     }
+
+    signingConfigs {
+        release {
+            keyAlias RELEASE_KEY_ALIAS
+            keyPassword RELEASE_KEY_PASSWORD
+            storeFile file(RELEASE_STORE_FILE)
+            storePassword RELEASE_STORE_PASSWORD
+        }
+
+        debug {
+            keyAlias RELEASE_KEY_ALIAS
+            keyPassword RELEASE_KEY_PASSWORD
+            storeFile file(RELEASE_STORE_FILE)
+            storePassword RELEASE_STORE_PASSWORD
+        }
+    }
+
     buildTypes {
         debug {
             minifyEnabled false
+            signingConfig signingConfigs.debug //签名
         }
 
         release {
@@ -30,8 +47,21 @@ android {
             shrinkResources true
             // Log
             buildConfigField "boolean", "LOG_DEBUG", "false"
+            signingConfig signingConfigs.release //签名
         }
     }
+
+    //在Build Variants 中会生成对应的 playDebug 和playRelease 版本。。每一组两个
+    productFlavors{
+        play{
+
+        }
+
+        dev{
+
+        }
+    }
+
 }
 
 dependencies {

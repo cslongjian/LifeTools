@@ -9,8 +9,6 @@ android {
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
 
         // PHP 环境
         buildConfigField "String", "HOST_PHP", phpEnv
