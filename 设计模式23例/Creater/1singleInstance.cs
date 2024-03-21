@@ -1,3 +1,4 @@
+// https://www.cnblogs.com/zhili/p/SingletonPatterm.html
 /// <summary>
 /// 单例模式的实现
 /// </summary>

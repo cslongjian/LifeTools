@@ -55,7 +55,10 @@
 // 参考 https://blog.csdn.net/guorui_java/article/details/104026988
 
 
-
+// 4 reactnative Animated 动画的解析
+// 怎么声明，2如何使用，3 怎么组装复杂构成的动画。
+// https://blog.csdn.net/Crazy_SunShine/article/details/82887769
+// https://blog.csdn.net/sinat_17775997/article/details/99688983
 
 
 
