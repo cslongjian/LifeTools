@@ -1,0 +1,116 @@
+
+我的SQL 操作记录
+
+select id,mac,palletsn FROM macsn_device where mac in('44237C7560EC','6490C1B7A2C3',)
+
+select * from macsn_device where  sn_time>'2021-06-30' and sn_time<'2021-07-14'
+
+ select * from macsn_device202010 WHERE factory='chuangwei'
+-- DELETE FROM macsn_device202010 WHERE factory='chuangwei' 
+DELETE FROM macsn_device202010 WHERE factory='chuangwei' AND type IS NULL
+
+SELECT  
+  * 
+FROM  
+  macsn_device202010  
+WHERE  
+  factory= 'chuangwei' 
+  AND  type  is  null
+
+
+SELECT  
+  count(sn) 
+FROM  
+  macsn_device  
+WHERE  
+  sn_time> '2021-07-04' 
+  AND  sn_time< '2021-07-08'
+
+
+SELECT  
+  * 
+FROM  
+--   macsn_device202010
+
+WHERE  
+  --   factory= 'chuangwei'
+  middlepartsn  = 'MZXH152641702316ABE' 
+  AND  sn_time> '2021-07-04' 
+  AND  sn_time< '2021-07-08'
+
+
+
+SELECT  
+  * 
+FROM  
+--   macsn_device202010
+ middlepart
+-- pallet
+WHERE  
+--   --   factory= 'chuangwei'
+  middlepartsn  = 'MZXH152641702316ABE' 
+--   AND  sn_time> '2021-07-04' 
+--   AND  sn_time< '2021-07-08'
+
+
+
+SELECT  
+  * 
+FROM  
+  middlepart  
+WHERE  
+  middlepartsn  like  'ZXLJ%' order by id DESC
+
+UPDATE macsn_device202010 SET attr3 = NULL WHERE sn in ('17087/00000001','17087/00000002','17087/00000003')
+27324/00069098
+27324/00069118
+27324/00069125
+27324/00069087
+27324/00069085
+27324/00069069
+27324/00069066
+27324/00069038
+27324/00069132
+27324/00069101
+27324/00069116
+
+UPDATE  
+  macsn_device202010  
+SET  
+  attr3  = NULL  
+WHERE  
+  sn  in  (
+    '27324/00069098', '27324/00069118', 
+    '27324/00069125', '27324/00069087', 
+    '27324/00069085', '27324/00069069', 
+    '27324/00069066', '27324/00069038', 
+    '27324/00069132', '27324/00069101', 
+    '27324/00069116'  )
+
+
+SELECT  
+  * 
+FROM  
+  macware  
+WHERE  
+  mac  > '11318202' 
+  AND  mac  < '11318212' 
+  AND  print_time  IS  NULL
+
+//查找 异常数据
+SELECT
+	*
+FROM
+	inspection
+WHERE
+	progress_node = 1
+AND STATUS = 0
+
+ch
+//
+
+
+
+
+
+

@@ -1,0 +1,47 @@
+
+
+class name extends PureComponent{
+ static propTypes = {
+    containerStyle: PropTypes.any,
+    disabled: PropTypes.bool,
+    themeColor: PropTypes.string,
+    themeBackgroundColor: PropTypes.string,
+    underlayColor: PropTypes.string,
+    hasShadow: PropTypes.bool,
+    iconContainerStyle: PropTypes.any,
+    iconStyle: PropTypes.any,
+    icon: PropTypes.any,
+    iconText: PropTypes.string,
+    title: PropTypes.string,
+    subtitle: PropTypes.string,
+    onPress: PropTypes.func,
+    onSwitch: PropTypes.func,
+    switchOn: PropTypes.bool,
+    rightText: PropTypes.string,
+    rightArrow: PropTypes.bool
+  };
+  static defaultProps = {
+    underlayColor: 'rgba(0, 0, 0, 0.05)',
+    hasShadow: true
+  };
+
+  constructor(props) {
+        super(props);
+        let { isShown, childrenHeight } = props;
+     
+        this.state = {
+            height: new Animated.Value(blockHeight),
+            opacity: new Animated.Value(blockOpacity)
+        }
+    }
+
+相关组件方法
+
+自定义方法
+
+私有方法
+
+render(){
+
+}
+}
